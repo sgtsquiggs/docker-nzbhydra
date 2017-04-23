@@ -1,0 +1,6 @@
+#!/usr/bin/with-contenv bash
+
+# fetch site
+if [[ ! -d /app/nzbhydra/.git ]]; then
+    git clone https://github.com/theotherp/nzbhydra /app/nzbhydra
+fi

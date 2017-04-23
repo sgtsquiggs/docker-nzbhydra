@@ -1,0 +1,9 @@
+#!/usr/bin/with-contenv bash
+cd /config || exit
+exec \
+    s6-setuidgid abc python /app/nzbhydra/nzbhydra.py \
+        --config /config/settings.cfg \
+        --database /config/nzbhydra.db \
+        --logfile /config/nzbhydra.log \
+        --nobrowser
+
